@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <h1>Register</h1>
+    <form action="." method="post">
+        {% csrf_token %}
+        <span class="text-danger small">{{ field.errors }}</span>
+        {{ user_form.as_p }}        
+        {{ userprofile_form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}
+
